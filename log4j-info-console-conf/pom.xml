@@ -11,8 +11,8 @@
 		<version>0.1.0</version>
 	</parent>
 
-	<name>og4j-info-console-conf</name>
-	<description>og4j-info-console-conf</description>
+	<name>log4j-info-console-conf</name>
+	<description>log4j-info-console-conf</description>
 
 	<organization>
 		<url>http://www.fugerit.org</url>
