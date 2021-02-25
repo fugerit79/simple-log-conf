@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>log4j-info-console-conf</artifactId>
+
+	<parent>
+		<groupId>org.fugerit.java.stub</groupId>
+		<artifactId>simple-log-conf</artifactId>
+		<version>0.1.0</version>
+	</parent>
+
+	<name>og4j-info-console-conf</name>
+	<description>og4j-info-console-conf</description>
+
+	<organization>
+		<url>http://www.fugerit.org</url>
+		<name>Fugerit</name>
+	</organization>
+
+	<url>http://www.fugerit.org/java/</url>
+
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java-version-compliance>1.8</java-version-compliance>
+		<j2ee-version-compliance>7.0</j2ee-version-compliance>
+		<maven.compiler.source>${java-version-compliance}</maven.compiler.source>
+		<maven.compiler.target>${java-version-compliance}</maven.compiler.target>   
+	</properties>
+
+	<build>
+
+		<plugins>
+
+		</plugins>
+
+	</build>
+
+	<dependencies>
+	</dependencies>
+
+</project>

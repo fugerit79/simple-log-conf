@@ -1,0 +1,120 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.fugerit.java.stub</groupId>
+	<artifactId>simple-log-conf</artifactId>
+	<packaging>pom</packaging>
+	<version>0.1.0</version>
+
+	<name>simple-log-conf</name>
+	<description>simple-log-conf</description>
+
+	<organization>
+		<url>http://www.fugerit.org</url>
+		<name>Fugerit</name>
+	</organization>
+
+	<url>http://www.fugerit.org/java/</url>
+
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Matteo a.k.a. Fugerit</name>
+			<email>m@fugerit.org</email>
+			<organization>Fugerit</organization>
+			<organizationUrl>https://www.fugerit.org</organizationUrl>
+		</developer>
+		<developer>
+			<name>Daneel</name>
+			<email>d@fugerit.org</email>
+			<organization>Fugerit</organization>
+			<organizationUrl>https://www.fugerit.org</organizationUrl>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git://github.com/fugerit79/simple-log-conf.git</connection>
+		<developerConnection>scm:git:ssh://github.com/fugerit79/simple-log-conf.git</developerConnection>
+		<url>http://github.com/fugerit79/simple-log-conf</url>
+	</scm>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	    <!-- release dependancies -->
+	    <nexus-version>1.6.8</nexus-version>
+	    <mvn-gpg-version>1.6</mvn-gpg-version>			
+	</properties>
+
+	<modules>
+		<module>log4j-info-console-conf</module>
+	</modules>
+
+	<build>
+
+		<plugins>
+
+		</plugins>
+
+	</build>
+
+	<dependencies>
+
+	</dependencies>
+	
+	<profiles>
+	
+		<profile>
+			<id>doRelease</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.sonatype.plugins</groupId>
+						<artifactId>nexus-staging-maven-plugin</artifactId>
+						<version>${nexus-version}</version>
+						<extensions>true</extensions>
+						<configuration>
+							<serverId>ossrh</serverId>
+							<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+							<autoReleaseAfterClose>true</autoReleaseAfterClose>
+						</configuration>
+					</plugin>
+
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<version>${mvn-gpg-version}</version>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+
+				</plugins>
+			</build>
+		</profile>	
+	
+	</profiles>
+	
+
+</project>
